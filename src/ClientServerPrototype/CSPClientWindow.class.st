@@ -164,6 +164,9 @@ CSPClientWindow >> doAddSpinner [
 	
 	transparent addChild: spinner.
 	
+	useCompositionLayer ifTrue: [ 
+		transparent beInSingleCompositionLayer].
+	
 	self container addChild: transparent as: #layoverSpinner.
 
 ]
@@ -282,7 +285,7 @@ CSPClientWindow >> registerEvents [
 
 	self hasSpinnerCheckbox whenClickedDo: [ :event |
 		hasSpinner := event currentTarget isChecked.
-		self doAddOrRemoveSpinner].
+		self doAddOrRemoveSpinner ].
 	
 	self useCompositionLaterCheckbox whenClickedDo: [ :event |
 		useCompositionLayer := event currentTarget isChecked.
