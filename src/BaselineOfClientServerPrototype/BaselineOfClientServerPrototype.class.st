@@ -17,10 +17,11 @@ BaselineOfClientServerPrototype >> baseline: spec [
 				baseline: 'Alexandrie' with: [ spec repository: 'github://pharo-graphics/Alexandrie:dev/src' ];
 				baseline: 'Bloc' with: [ spec repository: 'github://pharo-graphics/Bloc:dev/src' ];
 				baseline: 'Album' with: [ spec repository: 'github://pharo-graphics/Album:dev/src'  ];
-				baseline: 'Toplo' with: [ spec repository: 'github://pharo-graphics/Toplo:dev/src' ].
-
+				baseline: 'Toplo' with: [ spec repository: 'github://pharo-graphics/Toplo:dev/src' ];
+				baseline: 'PharoZeroMQ' with: [ spec repository: 'github://OpenSmock/PharoZeroMQ:main/src' ].
+				
 			spec
 				package: 'ClientServerPrototype'
-					with: [ spec requires: #('Alexandrie' 'Bloc' 'Album' 'Toplo') ]
+					with: [ spec requires: #('Alexandrie' 'Bloc' 'Album' 'Toplo' 'PharoZeroMQ') ]
 		].
 ]
